@@ -9,18 +9,11 @@ public class FacePlayer : MonoBehaviour {
 	Rigidbody2D rig;
 	public bool follow = false;
 
-	// @TODO *shrug*
-	bool dead = false;
-
 	void Start () {
 		rig = this.GetComponent<Rigidbody2D> ();
 	}
 
 	void Update () {
-		// @TODO *shrug*
-		if (dead == true) {
-			return;
-		}
 		if (player == null) {
 			// Find the players ship.
 			GameObject go = GameObject.Find("PlayerObject");
@@ -49,7 +42,6 @@ public class FacePlayer : MonoBehaviour {
 
 				if (distance < 15 && follow) {
 					rig.AddForce (transform.up * 2 * moveSpeed);
-					//transform.position += transform.up * shipSpeed * Time.deltaTime;
 					
 				}
 			} else {

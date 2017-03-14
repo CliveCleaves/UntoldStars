@@ -20,10 +20,13 @@ public class EnemyHealth : MonoBehaviour {
 	public void Hit(int damage) {
 		enemyHealth -= damage;
 		if (enemyHealth <= 0) {
-			// TODO Maybe instantiate a dead ship on fire floating around?
-			GameObject gol = Instantiate (destroyedLeft, transform.position, transform.rotation);
-//			GameObject gor = Instantiate (destroyedRight, transform.position, transform.rotation);
 
+			// Current force
+			Vector2 vel = this.gameObject.GetComponent<Rigidbody2D>().velocity;
+			GameObject gol = Instantiate (destroyedLeft, transform.position, transform.rotation);
+			gol.GetComponent<Rigidbody2D>().velocity = vel;
+
+			// GameObject gor = Instantiate (destroyedRight, transform.position, transform.rotation);
 			Destroy (gameObject);
 		}
 	}

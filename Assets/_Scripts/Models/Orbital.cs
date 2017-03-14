@@ -47,10 +47,14 @@ public class Orbital {
 		get {
 			// Hacky? An inefficient way to have planets pointing at sun...
 			// TODO make planets rotate and have the light from sun be static.
-			Vector3 dir = this.Position - Vector3.zero;
-			float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
-
-			return Quaternion.Euler(0, 0, angle+90);
+			if (Parent.ToString () != "SolarSystem") {
+				Vector3 dir = this.Position - Vector3.zero;
+				float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;	
+				return Quaternion.Euler(0, 0, angle+90);
+			}
+			else {
+				return Quaternion.identity;
+			}
 		}
 	}
 
