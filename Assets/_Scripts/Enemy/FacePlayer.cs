@@ -38,16 +38,16 @@ public class FacePlayer : MonoBehaviour {
 			Quaternion desiredRot = Quaternion.Euler (0, 0, zAngle);
 
 			// This section handles movement.
-			if (distance > 4) {
+			if (distance > 6) {
 
-				if (distance < 15 && follow) {
+				if (distance < 20 && follow) {
 					rig.AddForce (transform.up * 2 * moveSpeed);
 					
 				}
 			} else {
 				this.gameObject.GetComponent<ShootPlayer>().SendMessage ("shoot");
-				if (distance < 1.5f) {
-					rig.AddForce (-transform.up * 2f * moveSpeed);
+				if (distance < 2.5f) {
+					rig.AddForce (-transform.up * 3f * moveSpeed);
 				}
 				//rig.velocity = Vector2.Lerp(rig.velocity, Vector2.zero, Time.deltaTime);
 				rig.AddForce (transform.right * 0.6f * moveSpeed);

@@ -11,21 +11,24 @@ public class KeyCommands : MonoBehaviour {
 	// Items for projectile.
 	public GameObject projectile;
 	float fireDelta = 0.2F;
+	public Transform leftGunTip;
+	public Transform rightGunTip;
 
 	private float nextFire = 0.2F;
 	private GameObject newProjectile;
+	private GameObject newProjectile2;
 	private float myTime = 0.0F;
 
 	// Use this for initialization
 	void Start () {
-		rig = this.gameObject.GetComponent<Rigidbody2D>();	
+		rig = this.gameObject.GetComponent<Rigidbody2D>();
 	}
 	
 	// Update is called once per frame
 	void Update () {
 		myTime = myTime + Time.deltaTime;
-//		float v = Input.GetAxis ("Vertical");
-//		float h = Input.GetAxis ("Horizontal");
+		// float v = Input.GetAxis ("Vertical");
+		// float h = Input.GetAxis ("Horizontal");
 		float v = CrossPlatformInputManager.GetAxis ("Vertical");
 		float h = CrossPlatformInputManager.GetAxis ("Horizontal");
 
@@ -45,7 +48,8 @@ public class KeyCommands : MonoBehaviour {
 			Vector3 pos = transform.position;
 			pos.z = 0;
 			Camera.main.GetComponent<CameraShake>().startShake();
-			newProjectile = Instantiate(projectile, pos, transform.rotation) as GameObject;
+			newProjectile = Instantiate(projectile, leftGunTip.position, transform.rotation) as GameObject;
+			newProjectile2 = Instantiate(projectile, rightGunTip.position, transform.rotation) as GameObject;
 
 			Destroy(newProjectile, 5f);
 

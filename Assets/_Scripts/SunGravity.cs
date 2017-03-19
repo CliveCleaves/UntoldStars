@@ -37,7 +37,7 @@ public class SunGravity : MonoBehaviour {
 			Vector3 direction = heading / distance; // This is now the normalized direction.
 
 			if (distance > 2f) {
-				Vector3 gravForce = ((-25f * direction) / distance) * targetRig.mass;
+				Vector3 gravForce = ((-25f * direction) / distance) * 1.5f * targetRig.mass;
 				hitColliders [i].attachedRigidbody.AddForce (gravForce);
 			}
 			i++;

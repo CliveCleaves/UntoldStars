@@ -22,6 +22,8 @@ public class PlayerHealth : MonoBehaviour {
 	public void Hit(int damage) {
 		health -= damage;
 		updateHealth ();
+
+		// Death
 		if (health <= 0) {
 			
 			Vector2 vel = this.gameObject.GetComponent<Rigidbody2D>().velocity;

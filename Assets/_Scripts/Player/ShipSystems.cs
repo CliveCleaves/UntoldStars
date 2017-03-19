@@ -4,8 +4,12 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class ShipSystems : MonoBehaviour {
-	GameObject newGO;
-	Text myText;
+	public Text TextCockpit;
+	public Text TextFuselage;
+	public Text TextLeftWing;
+	public Text TextRightWing;
+
+
 	float cockpitSystem; // Weapon Damage Modifier?
 	int cockpitLevel;
 
@@ -20,38 +24,41 @@ public class ShipSystems : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		newGO = new GameObject("myTextGO");
 		cockpitSystem = 100.0f;
 		fuselageSystem = 100.0f;
 		leftwingSystem = 100.0f;
 		rightwingSystem = 100.0f;
-		myText = newGO.AddComponent<Text>();
-		Font ArialFont = (Font)Resources.GetBuiltinResource(typeof(Font), "Arial.ttf");
-		myText.font = ArialFont;
-		myText.material = ArialFont.material;
-
+		InvokeRepeating("drainSystems", 0, 5f);
 	}
 	
 	// Update is called once per frame
 	void Update () {
 		// Essentially drain each system slowly.
-		InvokeRepeating("drainSystems", 0, 5f);
-
+		TextCockpit.text = "Cockpit: " + cockpitSystem.ToString();
 	}
 	void drainSystems() {
+		
 		this.cockpitSystem -= 0.5f;
 		this.fuselageSystem -= 0.5f;
 		this.leftwingSystem -= 0.5f;
 		this.rightwingSystem -= 0.5f;
-		drawText ();
+
+		// This actually works. What we could do, is show the text for a few seconds.
 	}
-	void drawText() {
-		// TODO Figure out where things are.
-
-
-		newGO.transform.SetParent(this.transform);
-
-
-		myText.text = "Ta-dah!";
+	public void damageSystem(string Name, float Amt) {
+		switch(Name){
+		case "_Cockpit":
+			this.cockpitSystem -= Amt;
+			break;
+		case "_Fuselage":
+			this.fuselageSystem -= Amt;
+			break;
+		case "_LeftWing":
+			this.leftwingSystem -= Amt;
+			break;
+		case "_RightWing":
+			this.rightwingSystem -= Amt;
+			break;
+		}
 	}
 }

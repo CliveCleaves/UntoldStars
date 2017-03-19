@@ -18,6 +18,7 @@ public class Explode : MonoBehaviour {
 	void OnCollisionEnter2D(Collision2D coll) {
 		Camera.main.GetComponent<CameraShake>().startShake();
 		GameObject go = Instantiate (explosion, coll.gameObject.transform.position , Quaternion.identity);
+
 		if (coll.gameObject.GetComponent<EnemyHealth>()) {
 			coll.gameObject.GetComponent<EnemyHealth> ().Hit (damage);
 		}

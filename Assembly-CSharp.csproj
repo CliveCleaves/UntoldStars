@@ -62,6 +62,7 @@
      <Compile Include="Assets\_Scripts\Player\KeyCommands.cs" />
      <Compile Include="Assets\_Scripts\Player\PlayerHealth.cs" />
      <Compile Include="Assets\_Scripts\Player\ShipSystems.cs" />
+     <Compile Include="Assets\_Scripts\Player\shipSystemHit.cs" />
      <Compile Include="Assets\_Scripts\SunGravity.cs" />
      <Compile Include="Assets\_Scripts\Views\SolarSystemView.cs" />
      <Compile Include="Assets\_Scripts\bk_ScrollUV.cs" />
