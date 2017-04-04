@@ -4,9 +4,10 @@ using UnityEngine;
 
 public class MoveUp : MonoBehaviour {
 	// This should probably be renamed as its using physics instead of transform.
-	public float moveSpeed = 20f;
+	public float moveSpeed = 25f;
 	AudioSource shootSound;
 	Rigidbody2D rig;
+
 	// Use this for initialization
 	void Start () {
 		shootSound = this.GetComponent<AudioSource> ();
@@ -16,11 +17,5 @@ public class MoveUp : MonoBehaviour {
 
 		rig = this.GetComponent<Rigidbody2D> ();
 		rig.AddForce(transform.up * moveSpeed, ForceMode2D.Impulse);
-	}
-
-	// Update is called once per frame
-	void FixedUpdate () {
-		
-		//transform.position += transform.up * moveSpeed * Time.smoothDeltaTime;
 	}
 }

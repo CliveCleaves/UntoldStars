@@ -6,6 +6,7 @@ using UnityEngine;
 public class KeyCommands : MonoBehaviour {
 	float rotSpeed = 180.0F;
 	float moveSpeed = 25.0F;
+
 	Rigidbody2D rig;
 
 	// Items for projectile.
@@ -51,7 +52,8 @@ public class KeyCommands : MonoBehaviour {
 			newProjectile = Instantiate(projectile, leftGunTip.position, transform.rotation) as GameObject;
 			newProjectile2 = Instantiate(projectile, rightGunTip.position, transform.rotation) as GameObject;
 
-			Destroy(newProjectile, 5f);
+			Destroy(newProjectile, 4f);
+			Destroy(newProjectile2, 4f);
 
 			nextFire = nextFire - myTime;
 			myTime = 0.0F;

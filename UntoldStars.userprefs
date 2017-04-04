@@ -1,15 +1,22 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/_Scripts/Player/ShipSystems.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/_Scripts/Player/KeyCommands.cs">
     <Files>
-      <File FileName="Assets/_Scripts/Models/Orbital.cs" Line="1" Column="1" />
+      <File FileName="Assets/_Scripts/Models/Orbital.cs" Line="82" Column="3" />
       <File FileName="Assets/Standard Assets/CrossPlatformInput/Scripts/Joystick.cs" Line="1" Column="1" />
-      <File FileName="Assets/_Scripts/Views/SolarSystemView.cs" Line="1" Column="1" />
+      <File FileName="Assets/_Scripts/Views/SolarSystemView.cs" Line="54" Column="31" />
       <File FileName="Assets/_Scripts/Models/Planet.cs" Line="1" Column="1" />
-      <File FileName="Assets/_Scripts/Explode.cs" Line="21" Column="1" />
-      <File FileName="Assets/_Scripts/MoveUp.cs" Line="13" Column="36" />
-      <File FileName="Assets/shipSystemHit.cs" Line="18" Column="21" />
-      <File FileName="Assets/_Scripts/Player/ShipSystems.cs" Line="38" Column="3" />
+      <File FileName="Assets/_Scripts/Explode.cs" Line="18" Column="45" />
+      <File FileName="Assets/_Scripts/MoveUp.cs" Line="15" Column="14" />
+      <File FileName="Assets/_Scripts/Player/ShipSystems.cs" Line="19" Column="35" />
+      <File FileName="Assets/_Scripts/Player/KeyCommands.cs" Line="36" Column="26" />
+      <File FileName="Assets/_Scripts/Camera/CameraFollow.cs" Line="20" Column="4" />
+      <File FileName="Assets/_Scripts/Enemy/ShootPlayer.cs" Line="23" Column="15" />
+      <File FileName="Assets/_Scripts/Enemy/EnemyHealth.cs" Line="1" Column="1" />
+      <File FileName="Assets/_Scripts/Enemy/FacePlayer.cs" Line="43" Column="22" />
+      <File FileName="Assets/_Scripts/SunGravity.cs" Line="43" Column="8" />
+      <File FileName="Assets/_Scripts/Models/SolarSystem.cs" Line="1" Column="1" />
+      <File FileName="Assets/_Scripts/SunBurn.cs" Line="18" Column="22" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
