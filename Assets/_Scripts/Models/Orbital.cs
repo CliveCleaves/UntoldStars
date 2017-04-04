@@ -85,7 +85,6 @@ public class Orbital {
 
 	public double getAUfromMeter(ulong OrbitalDistance) {
 		// m -> AU 6.684587123 × 10^-12
-		double convert = (6.684587123 * Mathf.Pow(10, -12));
 		return (double)OrbitalDistance * (6.684587123 * Mathf.Pow(10, -12));
 	}
 		

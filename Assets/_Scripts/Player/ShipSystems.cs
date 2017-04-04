@@ -35,7 +35,7 @@ public class ShipSystems : MonoBehaviour {
 	void Update () {
 		// Essentially drain each system slowly.
 		TextCockpit.text = "Cockpit: " + cockpitSystem.ToString();
-	}
+	}    
 	void drainSystems() {
 		
 		this.cockpitSystem -= 0.5f;

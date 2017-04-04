@@ -48,7 +48,10 @@ public class SolarSystemView : MonoBehaviour {
 			Rigidbody2D rig = go.AddComponent<Rigidbody2D>();
 			rig.mass = 10000;
 			rig.gravityScale = 0;
+			CircleCollider2D circ = go.AddComponent<CircleCollider2D> ();
+			circ.radius = 2f;
 			go.AddComponent<SunGravity>();
+			go.AddComponent<SunBurn>();
 		}
 
 		// Set our position.
